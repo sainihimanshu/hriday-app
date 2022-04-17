@@ -1,0 +1,86 @@
+[
+	{
+		"diastolic": "142",
+		"systolic": "80",
+		"heartRate": "81",
+		"recordedAt": "25/02/22, 11:30"
+	},
+	{
+		"diastolic": "143",
+		"systolic": "74",
+		"heartRate": "76",
+		"recordedAt": "25/02/22, 21:43"
+	},
+	{
+		"diastolic": "136",
+		"systolic": "72",
+		"heartRate": "75",
+		"recordedAt": "26/02/22, 12:34"
+	},
+	{
+		"diastolic": "159",
+		"systolic": "78",
+		"heartRate": "69",
+		"recordedAt": "26/02/22, 21:29"
+	},
+	{
+		"diastolic": "154",
+		"systolic": "84",
+		"heartRate": "69",
+		"recordedAt": "27/02/22, 11:27"
+	},
+	{
+		"diastolic": "147",
+		"systolic": "83",
+		"heartRate": "67",
+		"recordedAt": "27/02/22, 20:18"
+	},
+	{
+		"diastolic": "156",
+		"systolic": "82",
+		"heartRate": "85",
+		"recordedAt": "28/02/22, 13:17"
+	},
+	{
+		"diastolic": "158",
+		"systolic": "86",
+		"heartRate": "73",
+		"recordedAt": "28/02/22, 21:23"
+	},
+	{
+		"diastolic": "171",
+		"systolic": "86",
+		"heartRate": "66",
+		"recordedAt": "01/03/22, 12:11"
+	},
+	{
+		"diastolic": "162",
+		"systolic": "88",
+		"heartRate": "60",
+		"recordedAt": "01/03/22, 18:03"
+	},
+	{
+		"diastolic": "169",
+		"systolic": "87",
+		"heartRate": "68",
+		"recordedAt": "02/03/22, 12:11"
+	},
+	{
+		"diastolic": "155",
+		"systolic": "86",
+		"heartRate": "81",
+		"recordedAt": "03/03/22, 11:37"
+	},
+	{
+		"diastolic": "153",
+		"systolic": "79",
+		"heartRate": "85",
+		"recordedAt": "04/03/22, 11:26"
+	},
+	{
+		"diastolic": "153",
+		"systolic": "80",
+		"heartRate": "75",
+		"recordedAt": "05/03/22, 10:05"
+	}
+]
