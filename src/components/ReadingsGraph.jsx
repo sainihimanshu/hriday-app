@@ -1,14 +1,20 @@
+import _ from 'lodash';
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Line, LineChart, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
 
-function ReadingsGraph({ readings }) {
+function ReadingsGraph() {
+  const readings = _.cloneDeep(useSelector(state => state.readings.readings));
+
+  readings.forEach(row => (row.recordedAt = row.recordedAt.format('DD/MM')));
+
   return (
-    <LineChart width={699} height={400} data={readings} margin={{ top: 30 }}>
+    <LineChart width={600} height={300} data={readings} margin={{ top: 30 }}>
       <XAxis dataKey="recordedAt" />
       <YAxis />
       <Tooltip />
       <Legend />
-      <CartesianGrid strokeDasharray="5 5" />
+      <CartesianGrid strokeDasharray="10 10" />
       <Line type="monotone" dataKey="diastolic" stroke="#8884d8" activeDot={{ r: 8 }} />
       <Line type="monotone" dataKey="systolic" stroke="#82ca9d" />
     </LineChart>

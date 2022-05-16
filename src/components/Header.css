@@ -1,0 +1,41 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 2em;
+	border-bottom: 2px solid black;
+}
+
+.header ul {
+	list-style: none;
+	display: flex;
+}
+
+.header ul>li{
+	margin-left: 1em;
+}
+
+.header ul a:hover {
+	text-decoration: underline;
+	font-weight: 800;
+}
+
+.logo {
+	width: 1.5em;
+	height: 1em;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cta {
+	background-color: blueviolet;
+	color: white;
+	border: none;
+	padding: 0.5em 1em;
+	font-weight: 700;
+	border-radius: 14px;
+}

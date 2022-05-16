@@ -1,0 +1,36 @@
+import React from 'react';
+
+function Instructions() {
+  return (
+    <div className="container">
+      <h3> How do I use the Hriday App? </h3>
+      <p>It is super convenient to use the app. First time setup takes 2 minutes.</p>
+      <p> Follow these steps.</p>
+      <ul>
+        <li>Create a WhatsApp group. </li>
+        <li>
+          Add your family member to it, if you want to share your BP readings with them. This step
+          is totally optional.
+        </li>
+        <li>
+          Whenever you monitor your BP using a sphygmomanometer (BP monitoring machine), send that
+          reading as message in the following format - <b>higherReading.lowerReading.heartRate</b>
+          <br />
+          Here are my heart readings that I have been recording. <img src="?" />
+          #Add image
+        </li>
+        <li>
+          When you decide to get the insights from the BP readings, export the chat as a text file.
+          <img src="?" /> #Add image{' '}
+        </li>
+        <li>
+          {' '}
+          Import this chat text file to the Hriday App. #Add image Hriday App will very quickly give
+          you insights about your BP readings.{' '}
+        </li>{' '}
+      </ul>
+    </div>
+  );
+}
+
+export default Instructions;

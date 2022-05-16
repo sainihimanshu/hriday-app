@@ -1,14 +1,19 @@
 import { isEmpty } from 'lodash';
 import { useRef } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import { useDispatch } from 'react-redux';
+import { setReadings } from '../features/readingsSlice';
+import '../index.css';
 
-// import moment from 'moment';
+import sampleReadings from '../assets/readings.json';
 
-function ReadingsInput({ readings, setReadings }) {
+function ReadingsInput() {
   const chatInput = useRef();
 
+  const dispatch = useDispatch();
+
   const parseRecordings = e => {
+    e.preventDefault();
+
     const { files } = chatInput.current;
 
     if (isEmpty(files)) return;
@@ -30,11 +35,8 @@ function ReadingsInput({ readings, setReadings }) {
         reading = reading.split(':')[1].trim();
 
         let [diastolic, systolic, heartRate] = reading.split("'");
-        const recordedAt = tsPart; // moment(tsPart, 'DD/MM/YY, HH:mm');
+        const recordedAt = tsPart;
 
-        // console.log(tsPart);
-        // const recordedAt = tsPart; //dayjs(tsPart, 'DD/MM/YY, HH:mm');
-        // console.log(recordedAt);
         selectedRows.push({
           diastolic,
           systolic,
@@ -43,26 +45,37 @@ function ReadingsInput({ readings, setReadings }) {
         });
       });
 
-      setReadings(selectedRows);
+      dispatch(setReadings(selectedRows));
     };
 
     fileReader.readAsText(chatFile);
   };
 
   return (
-    <Form style={{ width: '100%' }}>
-      <Form.Group className="my-4" controlId="chatFile">
-        <Form.Label>Upload exported chat txt file</Form.Label>
-        <Form.Control ref={chatInput} type="file" accept=".txt" />
-      </Form.Group>
-      <Button
-        onClick={() => {
-          parseRecordings();
-        }}
-      >
-        Import txt readings
-      </Button>
-    </Form>
+    <section>
+      <h2>A small step towards Heart health</h2>
+      <div className="txt-row">
+        <label className="btn import" htmlFor="chatFile">
+          Upload txt file
+        </label>
+        <input
+          style={{ display: 'none' }}
+          id="chatFile"
+          ref={chatInput}
+          type="file"
+          onChange={parseRecordings}
+          accept=".txt"
+        />
+        <button
+          className="btn sample"
+          onClick={() => {
+            dispatch(setReadings(sampleReadings));
+          }}
+        >
+          Load sample data
+        </button>
+      </div>
+    </section>
   );
 }
 
