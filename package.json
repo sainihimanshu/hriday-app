@@ -5,6 +5,8 @@
   "author": {
     "name": "himanshu saini"
   },
+  "homepage": ".",
+  "start_url": ".",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "lodash": "^4.17.21",

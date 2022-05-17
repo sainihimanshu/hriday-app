@@ -22,13 +22,13 @@ function Story() {
         A very prudent question. The app is as safe as it can get. None of your data leaves your
         mobile or computer. All data processing is done right in your browser. It is an open source
         app. You can check its source code on{' '}
-        <a hef="https://github.com/sainihimanshu" className="link" target={'_blank'}>
+        <a href="https://github.com/sainihimanshu" className="link">
           github.
         </a>
         <br />
         <br />
         If you have any more questions or suggestions, please dm on{' '}
-        <a href="https://twitter.com/_himsaini" target={'_blank'} className="link">
+        <a href="https://twitter.com/_himsaini" className="link">
           twitter.
         </a>
       </p>

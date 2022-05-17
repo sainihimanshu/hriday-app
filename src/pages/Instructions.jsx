@@ -21,11 +21,11 @@ function Instructions() {
           reading as message in the following format - <b>higherReading.lowerReading.heartRate</b>
           <br />
           Here are my heart readings that I have been recording.{' '}
-          <img src={grpImage} style={imgStyle} />
+          <img src={grpImage} style={imgStyle} alt="whatsapp group containing bp readings" />
         </li>
         <li>
           When you decide to get the insights from the BP readings, export the chat as a text file.
-          <img src={exportImage} style={imgStyle} />
+          <img src={exportImage} style={imgStyle} alt="whatsapp group export chat function" />
         </li>
         <li> Import this chat text file to the Hriday App. #Add image</li>
       </ul>
