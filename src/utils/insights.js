@@ -1,10 +1,13 @@
+import { toMoment } from '.';
+
 class Insights {
   constructor(readings) {
     this.readings = readings;
 
     this.readings.forEach(reading => {
-      reading.day = reading.recordedAt.format('dddd');
-      const hour = reading.recordedAt.hour();
+      const recordedAt = toMoment(reading.recordedAt);
+      reading.day = recordedAt.format('dddd');
+      const hour = recordedAt.hour();
       if (hour >= 4 && hour < 12) reading.timeGroup = 'Morning';
       else if (hour >= 12 && hour < 16) reading.timeGroup = 'Afternoon';
       else if (hour >= 16 && hour < 20) reading.timeGroup = 'Evening';
@@ -14,7 +17,7 @@ class Insights {
 
     const firstReading = readings[0];
     const lastReading = readings[readings.length - 1];
-    this.dayDiff = lastReading.recordedAt.diff(firstReading.recordedAt, 'day');
+    this.dayDiff = toMoment(lastReading.recordedAt).diff(toMoment(firstReading.recordedAt), 'day');
   }
 
   isNormalReading = reading => {

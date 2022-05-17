@@ -1,15 +1,14 @@
-import moment from 'moment';
-
 import { createSlice } from '@reduxjs/toolkit';
-const dateFormat = 'DD/MM/YY, HH:mm';
+import { cloneDeep } from 'lodash';
 
 const transformReadings = readings => {
-  readings.forEach(row => {
+  const newReadings = cloneDeep(readings);
+  newReadings.forEach(row => {
     row.diastolic = Number(row.diastolic);
     row.systolic = Number(row.systolic);
     row.heartRate = Number(row.heartRate);
-    row.recordedAt = moment(row.recordedAt, dateFormat);
   });
+  return newReadings;
 };
 
 const initialState = {
@@ -22,8 +21,7 @@ export const readingsSlice = createSlice({
   initialState,
   reducers: {
     setReadings: (state, action) => {
-      transformReadings(action.payload);
-      state.readings = action.payload;
+      state.readings = transformReadings(action.payload);
       state.fileParsed = true;
     },
   },

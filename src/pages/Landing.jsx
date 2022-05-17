@@ -10,12 +10,14 @@ function Landing() {
   const { readings, fileParsed } = useSelector(state => state.readings);
 
   const renderData = () => {
-    if (fileParsed && readings.length <= 0) return <></>;
+    if (!fileParsed && readings.length <= 0) return <></>;
     return (
       <>
         <ShowInsights readings={readings} />
-        <ReadingsGraph />
-        <ReadingsTable />
+        <div className="data-container">
+          <ReadingsGraph />
+          <ReadingsTable />
+        </div>
       </>
     );
   };

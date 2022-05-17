@@ -13,28 +13,28 @@ function ReadingsInput() {
 
   const parseRecordings = e => {
     e.preventDefault();
+    console.log('1');
 
     const { files } = chatInput.current;
 
+    console.log(files);
     if (isEmpty(files)) return;
 
     const chatFile = files[0];
 
+    console.log({ chatFile });
     const fileReader = new FileReader();
     fileReader.onload = () => {
       const chatTxt = fileReader.result;
-
-      const validRowRegex = new RegExp("(\\d+'\\d+'\\d+$)");
-
+      const validRowRegex = new RegExp('(\\d+.\\d+.\\d+$)');
       const rawMsgs = chatTxt.split('\n').filter(row => validRowRegex.test(row));
-
       const selectedRows = [];
       rawMsgs.forEach(row => {
         let [tsPart, reading] = row.split('-');
         tsPart = tsPart.trim();
         reading = reading.split(':')[1].trim();
 
-        let [diastolic, systolic, heartRate] = reading.split("'");
+        let [diastolic, systolic, heartRate] = reading.split('.');
         const recordedAt = tsPart;
 
         selectedRows.push({

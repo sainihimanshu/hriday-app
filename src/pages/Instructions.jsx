@@ -1,5 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import exportImage from '../assets/export.png';
+import grpImage from '../assets/grp.png';
 
+const imgStyle = { display: 'block', width: '400px' };
 function Instructions() {
   return (
     <div className="container">
@@ -16,19 +20,21 @@ function Instructions() {
           Whenever you monitor your BP using a sphygmomanometer (BP monitoring machine), send that
           reading as message in the following format - <b>higherReading.lowerReading.heartRate</b>
           <br />
-          Here are my heart readings that I have been recording. <img src="?" />
-          #Add image
+          Here are my heart readings that I have been recording.{' '}
+          <img src={grpImage} style={imgStyle} />
         </li>
         <li>
           When you decide to get the insights from the BP readings, export the chat as a text file.
-          <img src="?" /> #Add image{' '}
+          <img src={exportImage} style={imgStyle} />
         </li>
-        <li>
-          {' '}
-          Import this chat text file to the Hriday App. #Add image Hriday App will very quickly give
-          you insights about your BP readings.{' '}
-        </li>{' '}
+        <li> Import this chat text file to the Hriday App. #Add image</li>
       </ul>
+      <p>
+        Hriday App will very quickly give you insights about your BP readings.{' '}
+        <Link to="/" className="link">
+          Try it yourself
+        </Link>
+      </p>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Insights from '../insights';
+import Insights from '../utils/insights';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
 
