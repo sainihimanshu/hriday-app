@@ -13,8 +13,8 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <Link to={'/'} className="cta">
-              Get Started
+            <Link to={'/'}>
+              <button className="cta">Get Started</button>
             </Link>
           </li>
           <li>

@@ -42,7 +42,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 
@@ -51,9 +50,7 @@ a {
       padding: 10% 10% 0 10%;
     }
 
-  .data-container {
-    width: '80%';
-  }
+ 
 }
 
 
@@ -63,8 +60,8 @@ a {
   border: none;
   padding: 0.5em 1em;
   font-weight: 700;
+  font-size: 1.2em;
   border-radius: 14px;
-  min-height: 3em;
   cursor: pointer;
 }
 
@@ -74,8 +71,12 @@ a {
     -moz-transform: scale(1.1, 1.1);
 }
 
+.import {
+    margin-right: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+}
 .sample {
-  margin-left: 1em;
   background-color: rgb(210, 152, 75);
 }
 
@@ -138,3 +139,9 @@ tr:hover {
   background-color: #ddd;
 }
 
+
+.line {
+  background-color: black;
+  height: 2px;
+  width: 100vw;
+}

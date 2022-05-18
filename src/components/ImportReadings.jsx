@@ -13,16 +13,13 @@ function ReadingsInput() {
 
   const parseRecordings = e => {
     e.preventDefault();
-    console.log('1');
 
     const { files } = chatInput.current;
 
-    console.log(files);
     if (isEmpty(files)) return;
 
     const chatFile = files[0];
 
-    console.log({ chatFile });
     const fileReader = new FileReader();
     fileReader.onload = () => {
       const chatTxt = fileReader.result;

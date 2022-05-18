@@ -9,6 +9,8 @@ function App() {
   return (
     <>
       <Header />
+      <div className="line"></div>
+
       <Routes>
         <Route exact path="/" element={<Landing />} />
         <Route path="/about" element={<About />} />

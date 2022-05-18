@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import exportImage from '../assets/export.png';
 import grpImage from '../assets/grp.png';
 
-const imgStyle = { display: 'block', width: '400px' };
+const imgStyle = { display: 'block', width: '300px' };
 function Instructions() {
   return (
     <div className="container">
@@ -22,12 +22,14 @@ function Instructions() {
           <br />
           Here are my heart readings that I have been recording.{' '}
           <img src={grpImage} style={imgStyle} alt="whatsapp group containing bp readings" />
+          <br />
         </li>
         <li>
           When you decide to get the insights from the BP readings, export the chat as a text file.
           <img src={exportImage} style={imgStyle} alt="whatsapp group export chat function" />
+          <br />
         </li>
-        <li> Import this chat text file to the Hriday App. #Add image</li>
+        <li> Import this chat text file to the Hriday App.</li>
       </ul>
       <p>
         Hriday App will very quickly give you insights about your BP readings.{' '}

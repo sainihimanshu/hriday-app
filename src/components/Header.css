@@ -3,12 +3,13 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 1em 2em;
-	border-bottom: 2px solid black;
 }
+
 
 .header ul {
 	list-style: none;
 	display: flex;
+	align-items: center;
 }
 
 .header ul>li{
@@ -38,4 +39,7 @@
 	padding: 0.5em 1em;
 	font-weight: 700;
 	border-radius: 14px;
+	font-size: 1em;
+	align-self: center;
+	cursor: pointer;
 }

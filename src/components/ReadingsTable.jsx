@@ -6,7 +6,7 @@ function ReadingsTable() {
   const readings = _.cloneDeep(useSelector(state => state.readings.readings));
 
   return (
-    <table style={{ minWidth: '50%', borderCollapse: 'collapse' }}>
+    <table style={{ minWidth: '60%', maxWidth: '80%', borderCollapse: 'collapse' }}>
       <thead>
         <tr>
           <th>BP</th>
